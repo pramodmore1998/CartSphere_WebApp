@@ -74,6 +74,7 @@ export const loginController=async(req,res)=>{
             httpOnly:true,
             secure:false,
             sameSite:"lax",
+            sameSite:"None",
             maxAge:7*24*60*60*10000
         })
 
@@ -103,6 +104,7 @@ export const logoutController=async (req,res)=>{
         httpOnly:true,
         secure:false,
         sameSite:'lax', 
+        sameSite:'None', 
     })
      res.status(201).send({
         success:true,
