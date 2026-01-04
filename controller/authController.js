@@ -72,7 +72,6 @@ export const loginController=async(req,res)=>{
     
          res.cookie('authToken', token, {
             httpOnly:true,
-            secure:false,
             sameSite:"None",
             maxAge:7*24*60*60*10000
         })
@@ -101,7 +100,6 @@ export const logoutController=async (req,res)=>{
     try{
        await res.clearCookie("authToken", {
         httpOnly:true,
-        secure:false,
         sameSite:'None', 
     })
      res.status(201).send({
