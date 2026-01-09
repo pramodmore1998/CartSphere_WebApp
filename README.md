@@ -39,9 +39,9 @@ server.js        → App entry point
 
 API Endpoints:
 Authentication: 
--POST /api/v1/auth/register
--POST /api/v1/auth/login
--POST /api/v1/auth/
+POST /api/v1/auth/register,
+POST /api/v1/auth/login,
+POST /api/v1/auth/logout
 
 User(Protected):
 -GET  /api/v1/auth/user-auth
