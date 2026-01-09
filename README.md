@@ -39,49 +39,49 @@ server.js        → App entry point
 
 API Endpoints:
 Authentication: 
-POST   /api/v1/auth/register
-POST   /api/v1/auth/login
-POST   /api/v1/auth/
+-POST   /api/v1/auth/register
+-POST   /api/v1/auth/login
+-POST   /api/v1/auth/
 
 User(Protected):
-GET  /api/v1/auth/user-auth
+-GET  /api/v1/auth/user-auth
 
 Admin(Protected):
-GET /api/v1/auth/admin-auth
+-GET /api/v1/auth/admin-auth
 
 Orders:
-GET  /api/v1/auth/orders
-GET  /api/v1/auth/all-orders
-PUT  /api/v1/auth/order-status/:orderId
+-GET  /api/v1/auth/orders
+-GET  /api/v1/auth/all-orders
+-PUT  /api/v1/auth/order-status/:orderId
 
 Cart:
-POST   /api/v1/cart/add
-GET    /api/v1/cart/get
-DELETE /api/v1/cart/remove/:pid
-PUT    /api/v1/cart/update
+-POST   /api/v1/cart/add
+-GET    /api/v1/cart/get
+-DELETE /api/v1/cart/remove/:pid
+-PUT    /api/v1/cart/update
 
 Category:
-POST   /api/v1/category/create-category
-PUT    /api/v1/category/update-category/:id
-GET    /api/v1/category/get-category
-GET    /api/v1/category/single-category/:slug
-DELETE /api/v1/category/delete-category/:id
+-POST   /api/v1/category/create-category
+-PUT    /api/v1/category/update-category/:id
+-GET    /api/v1/category/get-category
+-GET    /api/v1/category/single-category/:slug
+-DELETE /api/v1/category/delete-category/:id
 
 Products:
-POST     /api/v1/product/create-product
-GET      /api/v1/product/get-product  
-GET      /api/v1/product/get-product/:slug
-GET      /api/v1/product/product-photo/:pid
-DELETE   /api/v1/product /delete-product/:pid
-PUT      /api/v1/product/update-product/:pid
-POST     /api/v1/product/product-filter
-GET      /api/v1/product /product-count
-GET      /api/v1/product /product-list/:page
-GET      /api/v1/product/search/:keyword
-GET      /api/v1/product /related-product/:pid/:cid
-GET      /api/v1/product /product-category/:slug
-GET      /api/v1/product/braintree/token
-POST     /api/v1/product/braintree/payment
+-POST     /api/v1/product/create-product
+-GET      /api/v1/product/get-product  
+-GET      /api/v1/product/get-product/:slug
+-GET      /api/v1/product/product-photo/:pid
+-DELETE   /api/v1/product /delete-product/:pid
+-PUT      /api/v1/product/update-product/:pid
+-POST     /api/v1/product/product-filter
+-GET      /api/v1/product /product-count
+-GET      /api/v1/product /product-list/:page
+-GET      /api/v1/product/search/:keyword
+-GET      /api/v1/product /related-product/:pid/:cid
+-GET      /api/v1/product /product-category/:slug
+-GET      /api/v1/product/braintree/token
+-POST     /api/v1/product/braintree/payment
 
 Tools & Utilities:-
 - Git & Github
