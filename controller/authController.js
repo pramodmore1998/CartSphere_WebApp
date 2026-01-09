@@ -11,7 +11,37 @@ export const registerController=async(req,res)=>{
         if(!name || !email || !password || !phone || !address){
             return res.send({success:false , msg:"All fields is required"})
         }
-
+        const nameRegex = /^[A-Za-z ]+$/;
+          if (!nameRegex.test(name)) {
+            return res.status(400).send({
+              success: false,
+              msg: "Name must contain only alphabets",
+            });
+         }   
+         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(email)) {
+            return res.status(400).send({
+              success: false,
+              msg: "Invalid email format",
+             });
+         }
+        
+         const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}$/;
+            if (!passwordRegex.test(password)) {
+                return res.status(400).send({
+                  success: false,
+                  msg: "Password must be at least 6 characters and include a letter, number, and special character",
+              });
+          }
+        
+        const phoneRegex = /^[0-9]{10}$/;
+          if (!phoneRegex.test(phone)) {
+                return res.status(400).send({
+                  success: false,
+                  msg: "Phone number must be exactly 10 digits",
+            });
+          }
+    
         //Check existing user 
         const existingUser = await userModel.findOne({email})
         if(existingUser){
