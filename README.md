@@ -1,5 +1,5 @@
 CartSphere E-commerce Web App - 
-A production-ready application built using Node.js and Express, following MVC architecture, with secure authentication, modular structure, and scalable design.
+A production-ready application built using Node.js, Express, MongoDB for backend and react for frontend, following MVC architecture, with secure authentication, modular structure, and scalable design.
 
 Live Demo:- https://cartsphere-e-commerce.onrender.com/
 
